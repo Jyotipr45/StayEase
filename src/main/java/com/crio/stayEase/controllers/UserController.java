@@ -1,5 +1,6 @@
 package com.crio.stayEase.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,7 @@ public class UserController {
     
     public static final String USER_API_ENDPOINT = "/users";
 
+    @Autowired
     private final UserService userService;
 
     @PostMapping("/register")

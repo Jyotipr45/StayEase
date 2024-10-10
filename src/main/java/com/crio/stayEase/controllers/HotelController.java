@@ -1,5 +1,6 @@
 package com.crio.stayEase.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -32,6 +33,7 @@ public class HotelController {
     
     public static final String HOTEL_API_ENDPOINT = "/hotels";
 
+    @Autowired
     private final HotelService hotelService; 
 
     @PreAuthorize("hasRole('ADMIN')")

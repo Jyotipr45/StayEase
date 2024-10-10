@@ -1,5 +1,6 @@
 package com.crio.stayEase.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +20,8 @@ import lombok.RequiredArgsConstructor;
 public class BookingController {
 
     public static final String BOOKING_API_ENDPOINT = "/bookings";
-
+    
+    @Autowired
     private final BookingService bookingService;
 
     @PreAuthorize("hasRole('HOTEL_MANAGER')")

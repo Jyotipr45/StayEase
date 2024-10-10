@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class HotelRepositoryServiceImpl implements HotelRepositoryService {
-
+    
     private final HotelRepository hotelRepository;
 
     @Override
